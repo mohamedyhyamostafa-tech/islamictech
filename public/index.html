@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ISLAMIC TECH</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>🕌 ISLAMIC TECH</h1>
+  <div class="who" id="whoBox">
+    <div id="g_id_signin"></div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="courses">الكورسات</button>
+    <button class="tab-btn" data-tab="books">الكتب</button>
+    <button class="tab-btn" data-tab="videos">فيديوهات مفردة</button>
+    <button class="tab-btn" data-tab="challenges">التحديات</button>
+    <button class="tab-btn" data-tab="leaderboard">لوحة الصدارة</button>
+    <button class="tab-btn" data-tab="ai">المساعد الذكي</button>
+    <button class="tab-btn btn-outline" id="logoutBtn">خروج</button>
+  </div>
+
+  <div class="page">
+    <section id="tab-courses" class="tabpage"></section>
+    <section id="tab-books" class="tabpage hidden"></section>
+    <section id="tab-videos" class="tabpage hidden"></section>
+    <section id="tab-challenges" class="tabpage hidden"></section>
+    <section id="tab-leaderboard" class="tabpage hidden"></section>
+    <section id="tab-ai" class="tabpage hidden">
+      <div class="card">
+        <h3>اسأل المساعد الذكي</h3>
+        <div class="chat-box" id="chatBox"></div>
+        <div style="display:flex; gap:8px;">
+          <input id="chatInput" placeholder="اكتب سؤالك..." />
+          <button class="btn" id="chatSend" style="width:auto;">إرسال</button>
+        </div>
+        <button class="btn-outline" id="knowledgeMapBtn" style="margin-top:10px;">حلّل مستواي الآن</button>
+        <div id="knowledgeMapResult" style="white-space:pre-wrap; margin-top:10px;"></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div id="loginGate" class="page">
+  <div class="card">
+    <h3>سجّل دخولك</h3>
+    <p>سجّل بحساب Google عشان تدخل منصة اسلامك تك.</p>
+  </div>
+</div>
+
+<div id="modalRoot"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

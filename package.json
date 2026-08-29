@@ -1,0 +1,12 @@
+{
+  "name": "islamictech-cloudflare",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev public --d1=DB --r2=BOOKS_BUCKET",
+    "deploy": "wrangler pages deploy public",
+    "db:migrate": "wrangler d1 execute islamictech-db --file=schema.sql --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

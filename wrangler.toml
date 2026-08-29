@@ -1,0 +1,21 @@
+name = "islamictech"
+compatibility_date = "2026-08-01"
+pages_build_output_dir = "public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "islamictech-db"
+database_id = "REPLACE_AFTER_wrangler_d1_create"
+
+[[r2_buckets]]
+binding = "BOOKS_BUCKET"
+bucket_name = "islamictech-books"
+
+# متغيرات/أسرار لازم تتضاف بعد النشر (عبر wrangler pages secret put أو لوحة Cloudflare):
+#   SESSION_SECRET          نص عشوائي طويل (32+ حرف) لتوقيع جلسات الطلاب
+#   GOOGLE_CLIENT_ID        Client ID بتاع Google OAuth (Sign in with Google)
+#   ADMIN_EMAIL             إيميل جوجل اللي هيبقى أول أدمن تلقائيًا
+#   GEMINI_API_KEY          مفتاح Gemini من https://aistudio.google.com/apikey
+#   YOUTUBE_API_KEY / YOUTUBE_CHANNEL_ID     (اختياري لإحصائيات يوتيوب)
+#   FACEBOOK_PAGE_ID / FACEBOOK_PAGE_ACCESS_TOKEN  (اختياري لإحصائيات فيسبوك)
+#   STREAM_CUSTOMER_CODE / STREAM_SIGNING_KEY_ID / STREAM_SIGNING_KEY_PEM  (اختياري، لو هتستخدم Cloudflare Stream)
